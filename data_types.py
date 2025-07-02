@@ -20,4 +20,8 @@
 # print(type(123.1))
 # print(type(False))
 
-print(int("123") + int("456"))
+# print(int("123") + int("456"))
+
+name = input("What is your name? ")
+length_of_chars_in_name = len(name)
+print("You have " + str(length_of_chars_in_name) + " letters in your name.")
