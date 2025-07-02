@@ -6,4 +6,4 @@
 print("Hello there! Let's get you a band name!")
 city = input("What city did you grow up in? ")
 pet = input("And what is the name of your pet? ")
-print("Your band name is " + city + pet)
+print("Your band name is " + city + " " + pet)
