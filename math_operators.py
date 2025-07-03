@@ -1,0 +1,5 @@
+print("My age " + str(12))
+print(123 + 456)
+print(7-3)
+print(3*2) #whenever u divide, even if your number can be divided evenly, the result will come up as a float (a decimal value)
+print(type(6/3))
