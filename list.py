@@ -54,6 +54,10 @@ states_of_america = [
 
 print(states_of_america[0])
 
-states_of_america.append("Puerto Rico")
+# states_of_america.append("Puerto Rico")
 
-print(states_of_america[-1])
+# print(states_of_america[-1])
+
+states_of_america.extend (["Puerto Rico", "American Samoa"])
+
+print(states_of_america[-2])
