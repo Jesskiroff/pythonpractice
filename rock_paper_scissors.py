@@ -5,8 +5,8 @@ users_choice = input("Which do you choose? Type 0 for rock, 1 for paper, or 2 fo
 computers_choice = random.randint(0,2)
 computers_choice_str = str(computers_choice)
 
-print(users_choice)
-print(computers_choice_str)
+print(f"You chose {users_choice}")
+print(f"the computer chose {computers_choice_str}")
 
 
 
@@ -24,6 +24,3 @@ elif users_choice == "0" and computers_choice_str == "2":
     print("You win!")
 else:
     print("The game is tied")
-
-    
-

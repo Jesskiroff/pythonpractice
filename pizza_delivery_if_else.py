@@ -1,5 +1,5 @@
 print("Welcome to python pizza ")
-size = input("What size pizza do you want? s, m, or l: ").upper()
+size = input("What size pie do you want? s, m, or l: ").upper()
 
 topping = input("Do you want pepperoni on your pizza? Y or N: ").upper()
 extra_cheese = input("Do you want extra cheese on your pizza? Y or N: ").upper()
@@ -37,4 +37,4 @@ if topping =="Y":
 if extra_cheese == "Y":
     bill += 1
 
-print (bill)
+print (f"Your bill is ${bill}")
