@@ -29,6 +29,7 @@ print(users_choice)
 
 display_game = ""
 for letter in word:
+    
     if letter == users_choice:
         display_game += users_choice
     else:
