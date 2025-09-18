@@ -2,7 +2,6 @@ from __future__ import annotations
 import random
 from typing import List, Set
 
-
 WORD_BANK: List[str] = [
     "python",
     "developer",
@@ -15,7 +14,6 @@ WORD_BANK: List[str] = [
     "computer",
     "dictionary",
 ]
-
 
 def choose_word(word_bank: List[str]) -> str:
     """Return a random word from the provided bank."""

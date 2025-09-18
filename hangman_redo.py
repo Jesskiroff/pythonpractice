@@ -1,5 +1,7 @@
 #Create hangman program
+from __future__ import annotations
 import random
+from typing import List, Set
 
 #This is the list of words that the computer will randomly choose from
 word_bank = [
@@ -16,22 +18,19 @@ word_bank = [
 ]
 
 word = random.choice(word_bank)
-
 print(word)
+
+users_choice = input("Please pick a letter! \n")
+print(users_choice)
 
 display = ""
 for letter in word:
     display += "_"
 print(display)
 
-users_choice = input("Please pick a letter! \n")
-print(users_choice)
 
-display_game = ""
-for letter in word:
-    
-    if letter == users_choice:
-        display_game += users_choice
-    else:
-        display_game += "_"
-print(display_game)
+# display_game = ""
+# for letter in word:
+#     display_game += users_choice
+#     display_game += "_"
+# print(display_game)
