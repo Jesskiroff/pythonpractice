@@ -8,8 +8,6 @@
 
 # greet_w_name(time_zone="Eastern",name= "Audrey")
 
-
-
 alphabet = [
     'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
     'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'
@@ -20,10 +18,13 @@ original_text = input ("Type your message here:\n").lower() #This is the origina
 shift_number= int(input("Type the shift number: \n")) #This is the number of letters the message will either encrypt or decrypt into
 
 # 1. create a function called encrypt() that takes text and shift_number as 2 inputs
-def encrypt(original_text, shift_number):
-    letter = alphabet.index(original_text)
-    
 
 
 # 2. Inside the 'encrypt' func, shift each letter of the original_text forwards in the alphabet by the shift amount 
 #and print the encrypted text
+def encrypt(original_text, shift_number):
+    for letter in original_text:
+       index= alphabet.index(letter) + shift_number
+       print(index)
+    
+encrypt("hihowareyou", 2)
