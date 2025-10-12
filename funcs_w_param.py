@@ -14,17 +14,22 @@ alphabet = [
 ]
 
 direction = input("Type 'encode' to encrypt or decode to decrypt: \n") #This is the direction of the shift (whether it'll be a shift to the right or left of the chosen letter)
-original_text = input ("Type your message here:\n").lower() #This is the original text that the user types in
+text = input ("Type your message here:\n").lower() #This is the original text that the user types in
 shift_number= int(input("Type the shift number: \n")) #This is the number of letters the message will either encrypt or decrypt into
 
 # 1. create a function called encrypt() that takes text and shift_number as 2 inputs
 
-
 # 2. Inside the 'encrypt' func, shift each letter of the original_text forwards in the alphabet by the shift amount 
 #and print the encrypted text
-def encrypt(original_text, shift_number):
+
+
+def encrypt(original_text, shift_amount):
+    cipher_text = ""
     for letter in original_text:
-       index= alphabet.index(letter) + shift_number
-       print(index)
+       shifted_position = alphabet.index(letter) + shift_amount
+       cipher_text += alphabet[shifted_position]
+
+    print(f"Here is the result: {cipher_text}")
+       
     
-encrypt("hihowareyou", 2)
+encrypt(original_text= text, shift_amount= shift_number) 
