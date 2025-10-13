@@ -27,9 +27,23 @@ def encrypt(original_text, shift_amount):
     cipher_text = ""
     for letter in original_text:
        shifted_position = alphabet.index(letter) + shift_amount
+       shifted_position %= len(alphabet)
        cipher_text += alphabet[shifted_position]
 
     print(f"Here is the result: {cipher_text}")
-       
+# 3. Create a function called decrypt() that takes 'original_text' and 'shift_amount' as 2 seperate inputs
+
+def decrypt (original_text, shift_amount):
+    cipher_text = ""
+    for letter in original_text:
+       shifted_position = alphabet.index(letter) - shift_amount
+       shifted_position %= len(alphabet)
+       cipher_text += alphabet[shifted_position]
+    print(f"Here is the result: {cipher_text}")
+
+
+# 4. Inside the decrypt function, shift each letter of the original text in the alphabet backwards by the shift_amount and printthe decrypted text
+# 5. combine the encrypt func and decrypt func into a c=single function called caesar(), use the vlaue of the userchosen direction variable to determine 
+#    which functionality to use, call the caesar function instead of the encrypt function and pass in all 3 variables: direction, text, and shift.
     
-encrypt(original_text= text, shift_amount= shift_number) 
+decrypt(original_text= text, shift_amount= shift_number) 
