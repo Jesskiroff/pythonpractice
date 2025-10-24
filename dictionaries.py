@@ -24,10 +24,12 @@ empty_dictionary = {}
 
 empty_dictionary["first_key"] = "This is my first key"
 empty_dictionary["second_key"] = "This is my second key"
-
-# empty_dictionary
 print(empty_dictionary)
 
+
+for key in empty_dictionary:
+    print(key)
+    print(empty_dictionary[key])
 # In order to wipe and entire dictionary, 
 
 # loop thru a dictionary
