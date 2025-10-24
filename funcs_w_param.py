@@ -12,7 +12,7 @@ alphabet = [
     'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
 ]
 
-direction = input("Type 'encode' to encrypt or 'decode' to decrypt: \n") #This is the direction of the shift (whether it'll be a shift to the right or left of the chosen letter)
+direction = input("Type 'encode' to encrypt or 'decode' to decrypt: \n").lower() #This is the direction of the shift (whether it'll be a shift to the right or left of the chosen letter)
 text = input ("Type your message here:\n").lower() #This is the original text that the user types in
 shift_number= int(input("Type the shift number: \n")) #This is the number of letters the message will either encrypt or decrypt into
 
