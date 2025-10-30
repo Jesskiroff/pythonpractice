@@ -70,24 +70,58 @@ print(programming_dictionary)'''
 # print(student_grades)
 # Output: {'Alice': 'A', 'Bob': 'B', 'Charlie': 'Fail', 'Diana': 'C'}
 
+
+
 '''NESTED DICTIONARIES'''
 
-myfamily = {
-    "Child1" : {
-        "name" : "Mike",
-        "year" : 2004
-    },
-    "Child2" : {
-        "name" : "Alex",
-        "year" : 2005
-    },
-    "Child3" : {
-        "name": "Kate",
-        "year": 2006
+travel_log = {
+  "France" :{
+      "cities_visited" : ["Paris", "Lille", "Dijon"],
+      "total_visits" : "12"
+  },
+  "Germany": {
+      "cities_visited": ["Stuttgart", "Berlin", "Hamburg"],
+      "total_visits" : "5"
     }
 }
+print(travel_log["France"]["cities_visited"][0])
 
-for x, obj in myfamily.items():
-    print(x)
-    for y in obj: 
-        print(y + ':', obj[y])
+nested_list = ["A", "B", ["C", "D"]]
+print(nested_list[2][1])
+# myfamily = {
+#     "Child1" : {
+#         "name" : "Mike",
+#         "year" : 2004
+#     },
+#     "Child2" : {
+#         "name" : "Alex",
+#         "year" : 2005
+#     },
+#     "Child3" : {
+#         "name": "Kate",
+#         "year": 2006
+#     }
+# }
+# for x, obj in myfamily.items():
+#     print(x)
+    # for y in obj: 
+    #     print(y + ':', obj[y])
+
+
+# a = {'name' : 'John', 'age' : 20}
+# b = {'name' : 'May', 'age' : 23}
+# customers = {'c1' : a, 'c2' : b}
+# for x, obj in customers.items():
+#   print(x)
+    
+#   for y in obj:
+#     print(y + ':', obj[y]
+
+# a = {'name' : 'John', 'age' : 85}
+# b = {'name' : 'Jack', 'age' : 90}
+# geriatrics = {'g1' : a, 'g2' : b}
+
+# for x, obj in geriatrics.items():
+#   print(x)
+#   for y in obj:
+#     print(y + ':', obj[y])
