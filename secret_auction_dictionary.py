@@ -17,21 +17,36 @@
 # while other_bidder:
 #     questions()
 
-more_bidders = True
-
-name_of_bidder = input("What is your name?: ")
-bid_amount = int(input("How much would you like to bid?: $"))
-bid_continues = input("are there more bidders?").lower()
-
-while more_bidders == True:
+# more_bidders = True
+# def all_the_bids ():
+#     dictionary_set = {}
+#     dictionary_set[name_of_bidder] = bid_amount
     
-if bid_continues == "yes":
-    continue
-else:
-    more_bidders= False
+
+#     print(dictionary_set)
+
+# name_of_bidder = input("What is your name?: ")
+# bid_amount = int(input("How much would you like to bid?: $"))
+# bid_continues = input("are there more bidders?").lower()
+
+# while more_bidders:
+#     if bid_continues == "yes":
+#         continue
+#     else:
+#         more_bidders = False
+
+# while more_bidders == True:
+
+# if bid_continues == "yes":
+#     continue
+# else:
+#     more_bidders= False
 
 
-dictionary_set = {}
-dictionary_set[name_of_bidder] = bid_amount
+person = input("What is your name? : ")
+bid = int(input("How much do you want to bid? : "))
 
-print(dictionary_set)
+winner = "" 
+winning_bid = 0
+person_and_price = {}
+person_and_price[person] = bid
