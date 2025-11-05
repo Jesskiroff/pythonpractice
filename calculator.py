@@ -10,11 +10,17 @@ def multiply(n1, n2):
 def divide(n1, n2):
     return n1 / n2
 
-calc_dic = {}
-calc_dic["+"] = add
-calc_dic["-"] = subtract
-calc_dic["*"] = multiply
-calc_dic["/"] = divide
+operations = {}
+operations["+"] = add
+operations["-"] = subtract
+operations["*"] = multiply
+operations["/"] = divide
 
-print(calc_dic["*"](n1=4, n2=8))
+print(operations["*"](n1=4, n2=8))
+
+num1 = float(input("What is the first number?: "))
+operation_symbol = input("Pick an operation: +, -, *, or / ")
+num2 = float(input("What is the next number?: "))
+
+print(operations[operation_symbol](num1, num2))
 
