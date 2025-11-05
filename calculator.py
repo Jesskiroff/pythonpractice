@@ -16,11 +16,16 @@ operations["-"] = subtract
 operations["*"] = multiply
 operations["/"] = divide
 
-print(operations["*"](n1=4, n2=8))
+# print(operations["*"](n1=4, n2=8))
 
+should_accumulate = True
 num1 = float(input("What is the first number?: "))
-operation_symbol = input("Pick an operation: +, -, *, or / ")
-num2 = float(input("What is the next number?: "))
+while should_accumulate:
+    for symbol in operations:
+        print(symbol)
+    operation_symbol = input("Pick an operation: +, -, *, or / ")
+    num2 = float(input("What is the next number?: "))
 
-print(operations[operation_symbol](num1, num2))
-
+    answer = (operations[operation_symbol](num1, num2))
+    print(f"{num1}{operation_symbol}{num2}{answer}")
+    
