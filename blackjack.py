@@ -11,3 +11,13 @@ computer_cards = []
 
 for _ in range (2):
     user_cards.append(deal_card()) #when you want to add a single item to an existing list, you should use append instead of += (which is shorthand for the extend function)
+    computer_cards.append(deal_card())
+
+def calculate_score(cards):
+    if sum(cards) == 21 and len(cards) == 2:
+        return 0
+    if 11 in cards and sum(cards) > 21:
+        cards.remove(11)
+        cards.append(11)
+
+    return sum (cards)
