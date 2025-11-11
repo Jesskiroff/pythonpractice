@@ -12,25 +12,49 @@ list_of_numbers = [ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10,
                    91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
 
 # print("Welcome to the number guessing game! \n I'm thinking of a number between 1 and 100.")
-difficulty_level = input("Choose a difficulty. Type 'easy' or 'hard' : ") 
+difficulty_level = input("Choose a difficulty. Type 'easy' or 'hard' :  ") 
 
 number_chosen = int(random.choice(list_of_numbers)) #computer automatically generates a number to be guessed by the user
 
-number_of_attempts = 0
-if difficulty_level == "hard":
-    number_of_attempts = 5
-else:
-    number_of_attempts = 10
-print(number_of_attempts)
+# number_of_attempts = 0
+# if difficulty_level == "hard":
+#     number_of_attempts = 5
+# else:
+#     number_of_attempts = 10
+# print(number_of_attempts)
 
-for x in range(1, number_of_attempts + 1):
-    answer_attempt = int(input (f"Guess a number. You have {number_of_attempts} guesses."))
-    number_of_attempts -= 1
-    if answer_attempt == number_chosen:
-        print(f"You guessed it! the answer is {answer_attempt}")
+# game_continues = True
+
+def game():
+    number_of_attempts = 0
+    if difficulty_level == "hard":
+        number_of_attempts = 5
     else:
-        print(f"Nope, you have {number_of_attempts} guesses left")
-        if answer_attempt > number_chosen:
-            print ("Hint: It's lower")
+        number_of_attempts = 10
+    print(number_of_attempts)
+
+    game_continues = True
+    for x in range(1, number_of_attempts + 1):
+        answer_attempt = int(input (f"Guess a number. You have {number_of_attempts} guesses. "))
+        number_of_attempts -= 1
+        if answer_attempt == number_chosen:
+            print(f"You guessed it! the answer is {answer_attempt}")
+            return
+                
         else:
-            print ("Hint: It's higher")
+            print(f"Nope, you have {number_of_attempts} guesses left")
+            if answer_attempt > number_chosen:
+                print ("Hint: It's lower")
+            else:
+                print ("Hint: It's higher")
+
+    if number_of_attempts == 0:
+        game_continues = False
+        if game_continues == False:
+            print("You ran out of attempts, better luck next time!")
+
+game()
+
+        
+
+
